@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-navy text-gray-100 font-mono m-0;
+}
+
+/* Comic web-slinger radial pattern background */
+.comic-bg {
+  background: radial-gradient(circle at 20% 20%, rgba(33, 150, 243, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(229, 57, 53, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 60%);
+  min-height: 100vh;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.font-display {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 0px;
+  line-height: 1.6;
+}
+
+.currency {
+  font-family: 'Space Mono', monospace;
+}
+
+input, select, textarea {
+  @apply bg-navy-light border border-gray-700 rounded px-3 py-2 text-white w-full;
+  -webkit-appearance: none;
+}
+
+button {
+  @apply px-4 py-2 rounded font-semibold transition-colors;
+}
+
+.btn-blue {
+  @apply bg-spiderblue text-white hover:bg-blue-600;
+}
+
+.btn-red {
+  @apply bg-spiderred text-white hover:bg-red-600;
+}
+
+.btn-gray {
+  @apply bg-gray-600 text-white hover:bg-gray-500;
+}
+
+/* Remove number input spinners on iOS */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2347;
+  border-radius: 3px;
+}
